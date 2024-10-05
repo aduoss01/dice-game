@@ -9,6 +9,7 @@ initial_win_probability = 5 / 12
 initial_defeat_probability = 5 / 12
 initial_draw_probability = 1 / 6
 
+
 def roll_dice(random: Random, win_defeat_draw: str) -> tuple:
     player_roll = 0
     computer_roll = 0
@@ -27,11 +28,13 @@ def roll_dice(random: Random, win_defeat_draw: str) -> tuple:
 
     return player_roll, computer_roll
 
+
 def update_player_info(player_info: Dict[str, int], win_defeat_draw: str) -> None:
     if win_defeat_draw == "win":
         player_info["point"] += 10
         if player_info["point"] % 100 == 0 and player_info["level"] < 25:
             player_info["level"] += 1
+
 
 def play(user_id: str) -> Dict[str, int]:
     # 랜덤 객체 생성

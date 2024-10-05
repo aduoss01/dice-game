@@ -6,6 +6,7 @@ from core.play_game import play
 from core.rank import rank
 from util.json_io import dict_to_json_data, json_data_to_dict
 
+
 class Main(BaseHTTPRequestHandler):
     # JSON 응답 헤더를 설정하는 메서드
     def send_json_headers(self):
@@ -61,6 +62,7 @@ class Main(BaseHTTPRequestHandler):
 
         # 결과를 JSON 응답으로 전송
         self.write_json_response(result)
+
 
 # 서버 설정 및 실행
 server_address = ("localhost", 8080)

@@ -1,13 +1,17 @@
-from util.json_io import dict_to_json_file, json_file_to_dict
 from typing import Dict
+
+from util.json_io import dict_to_json_file, json_file_to_dict
+
 
 def get_user_info() -> Dict[str, dict]:
     """사용자 정보 딕셔너리를 불러오는 함수"""
     return json_file_to_dict()
 
+
 def save_user_info(user_info_dict: Dict[str, dict]) -> None:
     """사용자 정보 딕셔너리를 저장하는 함수"""
     dict_to_json_file(user_info_dict)
+
 
 def register(new_user_info: dict) -> dict:
     """
@@ -40,6 +44,7 @@ def register(new_user_info: dict) -> dict:
     # 사용자 정보 저장
     save_user_info(user_info_dict)
     return result_dict
+
 
 def login(new_user_info: dict) -> dict:
     """
